@@ -13,7 +13,7 @@ function Dashboard() {
 
    const[message,setMessage] = useState('');
    const navigate = useNavigate();
-  // http://localhost:5000/banner
+ 
   useEffect(() => {
     axios.get('https://backend-takeuf.onrender.com/banner')
       .then(
@@ -99,7 +99,7 @@ function Dashboard() {
                  className='border-[2px] rounded-md p-1 ml-1 border-gray-700'
               />
             </label>
-            <button className='text-black font-bold rounded-md hover:bg-green-600 p-2' onClick={() => { navigate('https://take-uf-ospi.vercel.app/') }}>Home</button>
+            <button className='text-black font-bold rounded-md hover:bg-green-600 p-2' onClick={() => { navigate('/') }}>Home</button>
             </div>
 
       <br />
