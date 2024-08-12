@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div className="flex bg-black h-[100vh] flex-col justify-center items-center">
-    <h1 className="font-bold text-[30px] text-white  md:text-[50px]">My Dynamic Website</h1>
+    <h1 className="font-bold text-[30px] text-white  md:text-[50px]">My Dynamic Websit</h1>
 
     
       {bannerData.visible && (
