@@ -34,32 +34,29 @@ function App() {
   }, [countdown, bannerData.visible]);
 
   return (
-    <div className="bg-black flex flex-col justify-center items-center text-white h-[100vh]  ">
-      <header className="App-header">
-        <h1 className="font-bold text-[50px]">My Dynamic Website</h1>
+    <div className="flex bg-black h-[100vh] flex-col justify-center items-center">
+    <h1 className="font-bold text-[30px] text-white  md:text-[50px]">My Dynamic Website</h1>
 
-        <div className="">
-          {bannerData.visible && (
-            <div className=" mt-5 rounded-lg  bg-white p-5 ">
-              <p className="text-black">{bannerData.description}</p>
-             
-              <div className="flex justify-between items-center text-black">
-              <p>Time left: {countdown}s</p>
-              {bannerData.link && (
-                <a
-                  href={bannerData.link}
-                  className="rounded-xl hover:bg-green-700 p-2 text-black font-bold"
-                >
-                  Go To Dashboard
-                </a>
-              )}
-              </div>
-             
-            </div>
-          )}
+    
+      {bannerData.visible && (
+        <div className="mt-5 rounded-lg bg-white p-5 max-w-[80%] sm:max-w-[60%] md:max-w-[50%] lg:max-w-[40%] xl:max-w-[30%] word-wrap break-word">
+          <p className="text-black">{bannerData.description}</p>
+
+          <div className="flex justify-between items-center text-black mt-4">
+            <p>Time left: {countdown}s</p>
+            {bannerData.link && (
+              <a
+                href={bannerData.link}
+                className="rounded-xl hover:bg-green-700 p-2 text-black font-bold"
+              >
+                Go To Dashboard
+              </a>
+            )}
+          </div>
         </div>
-      </header>
-    </div>
+      )}
+    
+  </div>
   );
 }
 
